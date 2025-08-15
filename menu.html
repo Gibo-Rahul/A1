@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Drinks & Bites - The Velvet Lounge</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar">
+  📍 456 Jazz Alley, Retro City | 📞 +91 98765 43210 | Open Daily: 5 PM - 2 AM
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">The Velvet Lounge</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+        <li class="nav-item"><a class="nav-link d-none" id="secretLink" href="secret.html">Secret</a></li>
+        <li class="nav-item d-flex align-items-center ms-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="nightModeToggle">
+            <label class="form-check-label" for="nightModeToggle"></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="py-5 text-center" style="margin-top: 70px;">
+  <h1 class="display-4 fade-up">Our Curated Menu</h1>
+  <p class="lead fade-up" style="animation-delay: 0.1s;">A selection of timeless cocktails and delectable bites.</p>
+</header>
+
+<section class="container my-5">
+  <div class="text-center mb-4 fade-up" style="animation-delay: 0.2s;">
+    <button class="btn btn-outline-secondary btn-filter active" data-filter="all">All</button>
+    <button class="btn btn-outline-secondary btn-filter" data-filter="cocktails">Cocktails</button>
+    <button class="btn btn-outline-secondary btn-filter" data-filter="wine">Wine & Beer</button>
+    <button class="btn btn-outline-secondary btn-filter" data-filter="bites">Bar Bites</button>
+  </div>
+
+  <div id="menuGrid" class="row mt-4 g-4">
+    <!-- Cocktails -->
+    <div class="col-md-4 menu-item fade-up" data-category="cocktails">
+      <div class="card h-100 shadow-sm">
+        <img src="https://plus.unsplash.com/premium_photo-1694825175387-19fd6e521e94?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Old Fashioned">
+        <div class="card-body">
+          <h5 class="card-title">Old Fashioned</h5>
+          <p class="card-text">Classic bourbon, bitters, sugar, and an orange twist. A timeless choice.</p>
+          <span class="text-muted">$14</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 menu-item fade-up" data-category="cocktails" style="animation-delay: 0.1s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://whiskyandtailor.com/wp-content/uploads/2023/04/Whisky-Cocktail-Sazerac-1024x439.png" class="card-img-top" alt="Manhattan">
+        <div class="card-body">
+          <h5 class="card-title">Manhattan</h5>
+          <p class="card-text">Rye whiskey, sweet vermouth, and a dash of bitters. Smooth and sophisticated.</p>
+          <span class="text-muted">$15</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 menu-item fade-up" data-category="cocktails" style="animation-delay: 0.2s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://media.istockphoto.com/id/1181424519/photo/vodka-martini-cocktail-on-a-counter-in-a-bar.jpg?s=612x612&w=0&k=20&c=CQTBQIRx7XgNQDb6V33GvIKEq9MRhWO0esSCK91BmB4= " class="card-img-top" alt="Martini">
+        <div class="card-body">
+          <h5 class="card-title">Classic Martini</h5>
+          <p class="card-text">Gin or vodka, dry vermouth, shaken or stirred to your preference.</p>
+          <span class="text-muted">$13</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wine & Beer -->
+    <div class="col-md-4 menu-item fade-up" data-category="wine" style="animation-delay: 0.3s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn.leonardo.ai/users/90c093e0-4aaa-4564-9e1d-e478205c6273/generations/46c98735-8c75-439a-85d8-f13c669c936d/segments/3:4:1/Lucid_Origin_I_want_an_image_of_2_elegant_wine_glasses_one_fil_2.jpg" class="card-img-top" alt="Red Wine">
+        <div class="card-body">
+          <h5 class="card-title">House Red/White Wine</h5>
+          <p class="card-text">A curated selection of fine wines by the glass or bottle.</p>
+          <span class="text-muted">From $10</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 menu-item fade-up" data-category="wine" style="animation-delay: 0.4s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn.leonardo.ai/users/28e4c7a8-a5b8-4762-bd12-5ad90e8ef787/generations/7f2768e3-0590-49fa-8942-7d6d73da9e7e/segments/2:4:1/Lucid_Origin_I_want_an_image_of_3_to_4_different_beer_brands_w_1.jpg" class="card-img-top" alt="Craft Beer">
+        <div class="card-body">
+          <h5 class="card-title">Local Craft Beers</h5>
+          <p class="card-text">Rotating selection of the best local brews on tap.</p>
+          <span class="text-muted">From $8</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar Bites -->
+    <div class="col-md-4 menu-item fade-up" data-category="bites" style="animation-delay: 0.5s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://hostthetoast.com/wp-content/uploads/2017/01/French-Onion-Beef-Sliders-1.jpg" class="card-img-top" alt="Mini Sliders">
+        <div class="card-body">
+          <h5 class="card-title">Gourmet Mini Sliders</h5>
+          <p class="card-text">Perfectly sized beef sliders with aged cheddar and caramelized onions.</p>
+          <span class="text-muted">$16</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 menu-item fade-up" data-category="bites" style="animation-delay: 0.6s;">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn.leonardo.ai/users/0635eaa0-2260-4ff5-aef5-3e950e13eada/generations/b7766e87-b7e7-45ec-86e1-4417c26336ae/segments/4:4:1/Lucid_Origin_I_want_an_image_of_golden_crispy_fries_tossed_wit_3.jpg" class="card-img-top" alt="Truffle Fries">
+        <div class="card-body">
+          <h5 class="card-title">Truffle Parmesan Fries</h5>
+          <p class="card-text">Crispy fries tossed with truffle oil and grated Parmesan.</p>
+          <span class="text-muted">$10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4">
+  <div class="container text-center">
+    <p class="mb-2">&copy; 2025 The Velvet Lounge. All rights reserved.</p>
+    <p class="mb-0">Follow us on:
+      <a href="#" class="text-decoration-none mx-2"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram"></a>
+      <a href="#" class="text-decoration-none mx-2"><img src="https://img.icons8.com/ios-filled/24/000000/facebook-new.png" alt="Facebook"></a>
+      <a href="#" class="text-decoration-none mx-2"><img src="https://img.icons8.com/ios-filled/24/000000/twitter.png" alt="Twitter"></a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

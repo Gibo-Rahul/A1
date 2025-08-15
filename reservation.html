@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Table - The Velvet Lounge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Velvet Lounge</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a class="nav-link d-none" id="secretLink" href="secret.html">Secret</a></li>
+          <li class="nav-item d-flex align-items-center ms-3">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="nightModeToggle">
+              <label class="form-check-label" for="nightModeToggle"></label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-5 text-center" style="margin-top: 70px;">
+    <h1 class="display-4 fade-up">Book Your Table</h1>
+    <p class="lead fade-up" style="animation-delay: 0.1s;">Reserve your spot for an unforgettable evening at The Velvet Lounge.</p>
+  </header>
+
+  <section class="container my-5">
+    <form id="reservationForm" class="p-4 shadow-sm bg-light rounded fade-up" style="animation-delay: 0.2s;">
+      <div class="mb-3">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" id="fullname" name="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="resDate" class="form-label">Date</label>
+        <input type="date" id="resDate" name="date" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" id="time" name="time" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="guests" class="form-label">Number of Guests</label>
+        <input type="number" id="guests" name="guests" class="form-control" min="1" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-custom">Reserve Now</button>
+    </form>
+  </section>
+
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal fade" id="confModal" tabindex="-1" aria-labelledby="confModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confModalLabel">Reservation Confirmed!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="confBody">
+          <!-- Content will be injected by JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

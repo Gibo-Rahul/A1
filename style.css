@@ -1,0 +1,431 @@
+/* style.css - Retro Bar Theme (Inspired by SusieCakes) */
+
+:root {
+    --primary-bg: #F8F0E3; /* Muted Cream */
+    --secondary-bg: #EAD7C7; /* Lighter Cream/Beige */
+    --accent-teal: #005F60; /* Deep Teal */
+    --accent-orange: #C25B3A; /* Burnt Orange/Rust */
+    --accent-gold: #D4AF37; /* Rich Gold/Mustard */
+    --text-dark: #4A3C30; /* Deep Brown */
+    --text-light: #fdf8f4; /* Off-white for contrast */
+    --hover-color: #8B4513; /* Saddle Brown for hover */
+
+    /* Night Mode Colors (approximate opposites) */
+    --night-primary-bg: #070F1C; /* Dark Blue/Black */
+    --night-secondary-bg: #152838; /* Darker Blue/Grey */
+    --night-accent-teal: #FF9F9F; /* Light Red/Pink */
+    --night-accent-orange: #3D94C5; /* Light Blue */
+    --night-accent-gold: #2B50C8; /* Darker Blue/Purple */
+    --night-text-dark: #B5C3CF; /* Light Grey/Blue */
+    --night-text-light: #02070B; /* Dark Black/Blue */
+    --night-hover-color: #74BADC; /* Lighter Blue */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for night mode */
+}
+
+/* Night Mode Styles */
+body.night-mode {
+    background-color: var(--night-primary-bg);
+    color: var(--night-text-dark);
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode h4,
+body.night-mode h5,
+body.night-mode h6 {
+    color: var(--night-accent-teal);
+}
+
+body.night-mode .top-bar {
+    background-color: var(--night-secondary-bg);
+    color: var(--night-text-dark);
+}
+
+body.night-mode .navbar {
+    background-color: var(--night-secondary-bg) !important;
+    border-bottom-color: rgba(255,255,255,0.1);
+}
+
+body.night-mode .navbar-brand {
+    color: var(--night-accent-teal) !important;
+}
+
+body.night-mode .navbar-nav .nav-link {
+    color: var(--night-text-dark) !important;
+}
+
+body.night-mode .navbar-nav .nav-link:hover,
+body.night-mode .navbar-nav .nav-link.active {
+    color: var(--night-accent-orange) !important;
+}
+
+body.night-mode .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Keep dark for readability */
+    color: var(--night-text-dark);
+}
+
+body.night-mode .carousel-caption h2,
+body.night-mode .carousel-caption p {
+    color: var(--night-text-dark);
+}
+
+body.night-mode .btn-custom {
+    background-color: var(--night-accent-orange);
+    color: var(--night-text-light);
+}
+
+body.night-mode .btn-custom:hover {
+    background-color: var(--night-hover-color);
+    color: var(--night-text-light);
+}
+
+body.night-mode .btn-outline-secondary {
+    color: var(--night-accent-teal);
+    border-color: var(--night-accent-teal);
+}
+
+body.night-mode .btn-outline-secondary:hover,
+body.night-mode .btn-outline-secondary.active {
+    background-color: var(--night-accent-teal);
+    color: var(--night-text-light);
+    border-color: var(--night-accent-teal);
+}
+
+body.night-mode .card-body {
+    background-color: var(--night-secondary-bg); /* Darker background for card body */
+    color: var(--night-text-dark);
+}
+
+body.night-mode .card-title {
+    color: var(--night-accent-teal);
+}
+
+body.night-mode footer {
+    background-color: var(--night-secondary-bg);
+    color: var(--night-text-dark);
+    border-top-color: rgba(255,255,255,0.1);
+}
+
+body.night-mode footer img {
+    filter: invert(70%) sepia(10%) saturate(1000%) hue-rotate(180deg) brightness(120%); /* Adjust social icons for night mode */
+}
+
+body.night-mode form.rounded {
+    background-color: var(--night-secondary-bg) !important;
+    border-color: rgba(255,255,255,0.05);
+}
+
+body.night-mode .form-label {
+    color: var(--night-text-dark);
+}
+
+body.night-mode .form-control,
+body.night-mode .form-select,
+body.night-mode .form-control:focus,
+body.night-mode .form-select:focus {
+    background-color: var(--night-primary-bg);
+    color: var(--night-text-dark);
+    border-color: var(--night-accent-teal);
+}
+
+body.night-mode .toast {
+    background-color: var(--night-accent-teal);
+    color: var(--night-text-light);
+}
+
+body.night-mode .toast-header {
+    background-color: var(--night-accent-teal);
+    color: var(--night-text-light);
+    border-bottom-color: rgba(0,0,0,0.2);
+}
+
+body.night-mode .toast-header strong {
+    color: var(--night-text-light);
+}
+
+body.night-mode .toast-header .btn-close {
+    filter: invert(0%); /* Make close button dark */
+}
+
+body.night-mode .toast-body {
+    background-color: var(--night-accent-teal);
+    color: var(--night-text-light);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-teal);
+    font-weight: 700;
+}
+
+.top-bar {
+    background-color: var(--secondary-bg);
+    color: var(--text-dark);
+    font-size: 14px;
+    padding: 8px 20px;
+    text-align: right;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar {
+    background-color: var(--secondary-bg) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease, border-bottom-color 0.5s ease;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--accent-teal) !important;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-orange) !important;
+}
+
+/* Night mode toggle switch styling */
+.form-check-label {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+body.night-mode .form-check-label {
+    color: var(--night-text-dark);
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23005F60'/%3e%3c/svg%3e"); /* Teal dot */
+    border-color: var(--accent-teal);
+    transition: background-position 0.15s ease-in-out;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--accent-orange);
+    border-color: var(--accent-orange);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fdf8f4'/%3e%3c/svg%3e"); /* Light dot */
+}
+
+body.night-mode .form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233D94C5'/%3e%3c/svg%3e"); /* Light blue dot */
+    border-color: var(--night-accent-orange);
+}
+
+body.night-mode .form-switch .form-check-input:checked {
+    background-color: var(--night-accent-teal);
+    border-color: var(--night-accent-teal);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2302070B'/%3e%3c/svg%3e"); /* Dark dot */
+}
+
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.7); /* Darken images for text readability */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 8px;
+    bottom: 20%; /* Adjust position */
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    margin: auto;
+    color: var(--text-light);
+}
+
+.carousel-caption h2 {
+    color: var(--text-light);
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+.btn-custom {
+    background-color: var(--accent-orange);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--hover-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+    color: var(--accent-teal);
+    border-color: var(--accent-teal);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary.active {
+    background-color: var(--accent-teal);
+    color: var(--text-light);
+    border-color: var(--accent-teal);
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: var(--text-light); /* Lighter background for card body */
+}
+
+footer {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-dark);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease, color 0.5s ease, border-top-color 0.5s ease;
+}
+
+footer img {
+    vertical-align: middle;
+    margin-top: -3px; /* Adjust icon alignment */
+    filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(30deg) brightness(80%); /* Default filter */
+    transition: filter 0.5s ease;
+}
+
+/* Fade-up animation for elements */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Toast notification styling */
+.toast-container {
+    z-index: 1080; /* Ensure it's above other elements */
+}
+
+.toast {
+    background-color: var(--accent-teal);
+    color: var(--text-light);
+    border: none;
+}
+
+.toast-header {
+    background-color: var(--accent-teal);
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.toast-header strong {
+    color: var(--text-light);
+}
+
+.toast-header .btn-close {
+    filter: invert(100%); /* Make close button white */
+}
+
+.toast-body {
+    background-color: var(--accent-teal);
+    color: var(--text-light);
+}
+
+/* General form styling */
+form.rounded {
+    background-color: var(--text-light) !important; /* Ensure form background is light */
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.5s ease;
+}
+
+/* Recipe Card Styles (for secret.html) */
+.recipe-card-link {
+  display: block; /* Make the link block-level */
+  height: 100%; /* Ensure it takes full height */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  padding: 10px; /* Add some padding around the card */
+}
+
+.recipe-card {
+  height: 100%; /* Ensure all cards in a row have same height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for pop-out effect */
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Pop out effect */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* More pronounced shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 5%;
+        width: 90%;
+        padding: 15px;
+    }
+    .carousel-caption h2 {
+        font-size: 2rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+    .top-bar {
+        text-align: center;
+    }
+}
